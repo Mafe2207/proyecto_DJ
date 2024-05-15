@@ -1,0 +1,87 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %} Mi_Crud - Estudiantes {% endblock %}
+
+{% block contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            <a
+            class="btn btn-success"
+            href="{% url 'crear' %}"
+            role="button"
+            >Agregar estudiante</a
+            >
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Estudiantes</h4>
+            <!---Tabla--->
+            <div
+                class="table-responsive"
+            >
+                <table
+                    class="table table-primary"
+                >
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombres</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Clase</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">1</td>
+                            <td>Roberto Andres</td>
+                            <td>Rodriguez Martinez</td>
+                            <td>foto_1.jpg</td>
+                            <td>Emprendimiento</td>
+                            <td>
+                                <a
+                                    class="btn btn-primary"
+                                    href="#"
+                                    role="button"
+                                    >Editar</a
+                                >
+                                <a
+                                    class="btn btn-danger"
+                                    href="#"
+                                    role="button"
+                                    >Borrar</a
+                                >
+                            </td>
+                            
+                        </tr>
+                        <tr class="">
+                            <td scope="row">2</td>
+                            <td>Andrea Camila</td>
+                            <td>Ruiz Paez</td>
+                            <td>foto_1.jpg</td>
+                            <td>Ambiental</td>
+                            <td>
+                                <a
+                                class="btn btn-primary"
+                                href="#"
+                                role="button"
+                                >Editar</a
+                            >
+                            <a
+                                class="btn btn-danger"
+                                href="#"
+                                role="button"
+                                >Borrar</a
+                            >
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---End of the Tabla--->
+        </div>
+        <div class="card-footer text-muted">Doctr. Julian Camilo Avila Alfonso </div>
+    </div>
+    
+{% endblock %}
