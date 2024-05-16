@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'Mi_Crud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME':'Mi_Crud.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'Mi_Crud',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

@@ -13,3 +13,6 @@ def estudiantes(request):
 
 def crear(request):
     return render(request,'estudiantes/crear.html')
+
+def editar(request):
+    return render(request,'estudiantes/editar.html')

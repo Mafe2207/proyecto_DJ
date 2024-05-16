@@ -5,15 +5,13 @@
    
 {% block contenido %}
 
-    <h1><strong>Formulario para Crear estudiantes</strong></h1>
-
-
     <div class="card">
+        <div class="card-header">Agregar un estudiante</div>
         <div class="card-body">
-            <h4 class="card-title">Ingrese sus datos aqui: </h4>
-            <p class="card-text">Nombres: </p>
-            <input type="text">
+            <h4 class="card-title">Datos del estudiante</h4>
+            {% include "estudiantes/formulario.html" %}
         </div>
+        <div class="card-footer text-muted">Footer del formulario</div>
     </div>
     
 

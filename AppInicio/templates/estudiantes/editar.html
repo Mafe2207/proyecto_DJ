@@ -2,8 +2,17 @@
 
 {% block titulo %} Editar - Estudiantes {% endblock %}
 
-    Formulario para Editar estudiantes 
-
 {% block contenido %}
+<div class="card">
+    <div class="card-header">Editar datos del estudiante</div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del estudiante</h4>
+
+        {% include "estudiantes/formulario.html" %}
+        
+    </div>
+    <div class="card-footer text-muted">Footer del formulario</div>
+</div>
+
 
 {% endblock %}
