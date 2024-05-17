@@ -29,16 +29,22 @@
                             <th scope="col">Apellidos</th>
                             <th scope="col">Foto</th>
                             <th scope="col">Clase</th>
+                            <th scope="col">Cedula</th>
+                            <th scope="col">Fecha de nacimiento</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
+
+                        {% for estudiante in estudiantes %}
                         <tr class="">
-                            <td scope="row">1</td>
-                            <td>Roberto Andres</td>
-                            <td>Rodriguez Martinez</td>
-                            <td>foto_1.jpg</td>
-                            <td>Emprendimiento</td>
+                            <td scope="row">{{ estudiante.id }}</td>
+                            <td>{{ estudiante.nombre }}</td>
+                            <td>{{ estudiante.apellido }}</td>
+                            <td><img src="{{ estudiante.foto.url }}" width="50px" height="50px" alt="Fotos" ></td>
+                            <td>{{ estudiante.clase }}</td>
+                            <td>{{ estudiante.cedula }}</td>
+                            <td>{{ estudiante.fecha_nacimiento }}</td></td>
                             <td>
                                 <a
                                     class="btn btn-primary"
@@ -55,27 +61,8 @@
                             </td>
                             
                         </tr>
-                        <tr class="">
-                            <td scope="row">2</td>
-                            <td>Andrea Camila</td>
-                            <td>Ruiz Paez</td>
-                            <td>foto_1.jpg</td>
-                            <td>Ambiental</td>
-                            <td>
-                                <a
-                                class="btn btn-primary"
-                                href="{% url 'editar' %}"
-                                role="button"
-                                >Editar</a
-                            >
-                            <a
-                                class="btn btn-danger"
-                                href="#"
-                                role="button"
-                                >Borrar</a
-                            >
-                            </td>
-                        </tr>
+                        
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
