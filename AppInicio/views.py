@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import estudiante
+from .forms import estudianteForm
+
 
 
 # Create your views here.
@@ -15,7 +17,14 @@ def estudiantes(request):
     return render(request, 'estudiantes/index.html', {'estudiantes':estudiantes})
 
 def crear(request):
-    return render(request,'estudiantes/crear.html')
+    formulario = estudianteForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('estudiantes')
+    return render(request,'estudiantes/crear.html', {'formulario':formulario})
 
 def editar(request):
     return render(request,'estudiantes/editar.html')
+
+def aboutus(request):
+    return render(request,'estudiantes/nosotros.html')
