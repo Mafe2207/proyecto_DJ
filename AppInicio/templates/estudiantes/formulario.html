@@ -16,7 +16,7 @@
                 value="{{ campo.value|default_if_none:'' }}"
             />
             <!--- Mensaje de error -->
-            <div class="col-12 help-text danger">{{ campo.errors }}</div> 
+            <div class="col-12 help-text bg-danger">{{ campo.errors }}</div> 
         </div>
     {% endfor %}
     <input
